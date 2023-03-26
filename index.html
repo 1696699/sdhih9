@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>C78 homework</title>
+    </head>
+    <body>
+        <center>
+            <script>
+                var i = 1
+                var x = ["","","gray","bob","jack"]
+                function next() {
+                    i++;
+                    document.getElementById("image").src="kid"+i+".png";
+                    document.getElementById("text").innerHTML = x[i];
+                    if (i > 3) {
+                        i = 1
+                    }
+                    if (i < 1) {
+                        document.getElementById("image").src="kid"+i+".png";
+                    }
+                    console.log(i);
+                }
+            </script>
+            <img id="image" src="kid1.png">
+            <h1 id="text"></h1>
+            <button id="Next_button" onclick="next();">Next</button>
+        </center>
+    </body>
+</html>
